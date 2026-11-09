@@ -1,0 +1,63 @@
+/* Estilos propios del Carrito (el resto viene de index.css) */
+:root { --anu: "Anuphan", system-ui, sans-serif; }
+.cart { max-width: 1340px; margin: 0 auto; padding: 40px 24px 96px; min-height: 70vh; }
+.cart h1 { font: 400 36px var(--serif); margin-bottom: 28px; }
+.cart__grid { display: grid; grid-template-columns: 1fr 410px; gap: 39px; align-items: start; }
+
+/* Productos */
+.items { display: grid; gap: 24px; }
+.item { display: grid; grid-template-columns: 87px 1fr auto; gap: 18px 22px; align-items: start; padding: 25px 28px 25px 18px; background: #fff; border-radius: 16px; }
+.item__img { display: grid; place-items: center; width: 87px; height: 87px; border-radius: 10px; background: #eed8d8; font-size: 36px; }
+.item h3 { font: 400 20px var(--serif); color: #0c0c0c; }
+.item__sub { margin-top: 4px; font: 400 13px var(--serif); color: #6b7280; }
+.item__price { font: 700 20px var(--anu); }
+.item__ctl { display: flex; align-items: center; gap: 16px; margin-top: 14px; }
+.qty { display: inline-flex; align-items: center; gap: 6px; padding: 4px; background: var(--light); border-radius: 40px; }
+.qty button { width: 33px; height: 31px; border: 0; border-radius: 50%; background: #fff; font: 700 20px var(--anu); cursor: pointer; }
+.qty button:hover { background: var(--gold); }
+.qty span { min-width: 20px; text-align: center; font-size: 20px; }
+.del { background: none; border: 0; padding: 4px; cursor: pointer; font: 400 12px var(--serif); color: #6b7280; }
+.del:hover { color: #e8523c; text-decoration: underline; }
+.empty { padding: 56px 24px; background: #fff; border-radius: 16px; text-align: center; font: 400 18px var(--serif); color: #6b7280; }
+.empty a { display: inline-block; margin-top: 18px; padding: 12px 28px; border-radius: 60px; background: var(--gold); color: #000; font: 400 15px "Alatsi", sans-serif; letter-spacing: .08em; }
+
+/* Ideas del asistente */
+.ideas { margin-top: 32px; padding: 28px; background: #ecf1ee; border: 1px solid #d6e2dd; border-radius: 20px; }
+.ideas h2 { font: 700 18px var(--anu); color: #6f8f87; }
+.ideas p { margin: 8px 0 18px; font: 400 15px var(--serif); color: #6b7280; }
+.ideas__btns { display: flex; flex-wrap: wrap; gap: 16px; }
+.ideas__btns button { height: 45px; padding: 0 28px; border: 2px solid #000; border-radius: 40px; background: transparent; font: 400 15px var(--body); cursor: pointer; transition: background .2s; }
+.ideas__btns button:hover { background: #fff; }
+
+/* Resumen */
+.summary { position: sticky; top: 90px; padding: 22px 24px 28px; background: #fff; border-radius: 20px; }
+.summary h2 { padding-bottom: 16px; border-bottom: 1px solid #e5e7eb; font: 400 24px var(--serif); }
+.rows { display: grid; gap: 16px; margin: 20px 0; }
+.rows div { display: flex; justify-content: space-between; align-items: baseline; }
+.rows dt { font: 400 16px var(--serif); color: #6b7280; }
+.rows dd { font: 700 16px var(--anu); }
+.rows .free { color: #5f8b80; font-weight: 600; font-size: 18px; }
+.rows .neg { color: #e8523c; }
+.extras { margin: 0 0 22px; padding: 16px; border: 0; border-radius: 15px; background: var(--light); }
+.extras legend { float: left; width: 100%; margin-bottom: 14px; padding: 0; font: 700 18px var(--anu); letter-spacing: .02em; }
+.chk { clear: both; display: flex; align-items: center; gap: 12px; margin-top: 12px; font: 400 15px "Alatsi", sans-serif; letter-spacing: .06em; color: #5d6670; cursor: pointer; }
+.chk input { position: absolute; opacity: 0; pointer-events: none; }
+.chk .box { width: 17px; height: 18px; flex-shrink: 0; border: .5px solid #000; border-radius: 3px; background: #fff; }
+.chk input:checked + .box { background: var(--gold); border-color: var(--gold); }
+.chk input:focus-visible + .box { outline: 2px solid var(--gold); outline-offset: 2px; }
+.total { display: flex; justify-content: space-between; align-items: baseline; padding-top: 20px; border-top: 1px solid #e5e7eb; font: 700 24px var(--anu); }
+.checkout { display: block; margin-top: 28px; height: 49px; line-height: 49px; border-radius: 60px; background: var(--gold); text-align: center; color: #000; font: 400 15px/49px "Alatsi", sans-serif; letter-spacing: .08em; transition: filter .2s; }
+.checkout:hover { filter: brightness(1.08); }
+.checkout[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+.secure { margin-top: 14px; text-align: center; font: 600 14px var(--anu); color: #7d8387; }
+.pay { margin-top: 22px; padding-top: 18px; border-top: 1px solid #e5e7eb; font: 600 15px/1.5 var(--anu); color: #7d8387; }
+
+@media (max-width: 1000px) {
+  .cart__grid { grid-template-columns: 1fr; }
+  .summary { position: static; }
+}
+@media (max-width: 560px) {
+  .item { grid-template-columns: 64px 1fr; padding: 18px; }
+  .item__img { width: 64px; height: 64px; font-size: 28px; }
+  .item__price { grid-column: 2; }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Categorías · Alodetalle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Alatsi&family=DM+Serif+Display&family=Inria+Sans&family=Inria+Serif:wght@700&family=Instrument+Sans:wght@600;700&family=Istok+Web:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/categorias.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__in">
+      <a href="index.html" class="logo">Alo<span>detalle</span></a>
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav class="nav__links" id="menu">
+        <a href="categorias.html" aria-current="page">Categorias</a>
+        <a href="index.html#asistente">Asistente</a>
+        <a href="zodiaco.html">Zodiaco</a>
+        <a href="empresas.html">Empresas</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="carrito.html" class="pill pill--dark" id="cart-link" hidden>Carrito <b class="badge" id="cart-count" hidden>0</b></a>
+        <a href="login.html" class="pill pill--dark pill--sm" id="login-link">Iniciar Sesión <span class="avatar" aria-hidden="true">👤</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section cats-page">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">EXPLORA POR CATEGORÍA</p>
+        <h2>Encuentra el regalo<br />que conecta</h2>
+      </div>
+
+      <div class="grid4 cats">
+        <a href="#" class="cat" style="--c:#80a29a"><span class="cat__e">🌿</span><span class="cat__t"><b>Bienestar</b>24 productos</span></a>
+        <a href="zodiaco.html" class="cat" style="--c:#1e2c3f"><span class="cat__e">🔮</span><span class="cat__t"><b>Zodiaco</b>12 signos</span></a>
+        <a href="#" class="cat" style="--c:#bd9952"><span class="cat__e">💕</span><span class="cat__t"><b>Pareja</b>18 productos</span></a>
+        <a href="#" class="cat" style="--c:#e4cfaa"><span class="cat__e">⭐</span><span class="cat__t"><b>Experiencias</b>10 kits</span></a>
+      </div>
+
+      <h3 class="subtitle">Todos los packs</h3>
+      <div class="grid3">
+        <a href="#" class="pack pack--simple">
+          <div class="pack__img" style="--c:#ede8df">🌸</div>
+          <div class="pack__body"><h3>Kit Flores &amp; Aromas</h3><p class="pack__price">S/.79</p></div>
+        </a>
+        <a href="#" class="pack pack--simple">
+          <div class="pack__img" style="--c:#d3e4fb">☕</div>
+          <div class="pack__body"><h3>Morning Ritual Box</h3><p class="pack__price">S/.99</p></div>
+        </a>
+        <a href="#" class="pack pack--simple">
+          <div class="pack__img" style="--c:#f7d7ec">🎂</div>
+          <div class="pack__body"><h3>Cumpleaños Especial</h3><p class="pack__price">S/.149</p></div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="logo logo--big">Alo<span>detalle</span></a>
+          <p class="footer__tag">Regalos que conectan. Momentos que permanecen. Diseñados para emocionar a quien más quieres.</p>
+          <div class="social">
+            <a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="WhatsApp">💬</a><a href="#" aria-label="Mi perfil">👤</a>
+          </div>
+        </div>
+        <div><h4>EXPLORAR</h4><a href="categorias.html">Categorías</a><a href="index.html#asistente">Asistente de regalos</a><a href="#explora">Por signo zodiacal</a><a href="empresas.html">Regalos corporativos</a></div>
+        <div><h4>MOMENTOS</h4><a href="#">Reconciliación</a><a href="#">Para el estrés</a><a href="#">Pareja</a><a href="#">Experiencias</a></div>
+        <div><h4>NOSOTROS</h4><a href="#">Quiénes somos</a><a href="blog.html">Blog</a><a href="login.html">Mi perfil</a><a href="#">Política de envíos</a></div>
+      </div>
+      <div class="footer__bar"><span>© 2025 Alodetalle. Todos los derechos reservados.</span><span>Hecho con 💛 en Lima, Perú</span></div>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

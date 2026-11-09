@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alodetalle · Regala una emoción, no un objeto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Abril+Fatface&family=Bad+Script&family=DM+Serif+Display&family=Inria+Serif:wght@700&family=Instrument+Sans:wght@600;700&family=Istok+Web:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__in">
+      <a href="#inicio" class="logo">Alo<span>detalle</span></a>
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav class="nav__links" id="menu">
+        <a href="categorias.html">Categorias</a>
+        <a href="#asistente">Asistente</a>
+        <a href="zodiaco.html">Zodiaco</a>
+        <a href="empresas.html">Empresas</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="carrito.html" class="pill pill--dark" id="cart-link" hidden>Carrito <b class="badge" id="cart-count" hidden>0</b></a>
+        <a href="login.html" class="pill pill--dark pill--sm" id="login-link">Iniciar Sesión <span class="avatar" aria-hidden="true">👤</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- CLIENTE (hero) -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero__grid">
+        <div>
+          <span class="tag-pill">✨ El regalo perfecto en 3 minutos</span>
+          <h1>Regala una <em>emoción</em>,<br />no un objeto.</h1>
+          <p class="hero__lead">Nuestro asistente inteligente analiza la personalidad, el vínculo y el momento para recomendarte el regalo que dejará huella.</p>
+          <div class="hero__cta">
+            <a href="#asistente" class="btn btn--gold">🎯 Probar el asistente</a>
+            <a href="#packs" class="btn btn--gray">Ver catálogo</a>
+          </div>
+          <dl class="stats">
+            <div><dt>+12K</dt><dd>regalos entregados</dd></div>
+            <div><dt>4.9★</dt><dd>calificación media</dd></div>
+            <div><dt>3 min</dt><dd>para elegir tu regalo</dd></div>
+          </dl>
+        </div>
+        <article class="feature">
+          <span class="feature__tag">🌿 Edición Especial</span>
+          <div class="feature__img" aria-hidden="true">🎁</div>
+          <p class="feature__kicker">PACK DEL MES</p>
+          <h3>Kit Conexión Romántica</h3>
+          <p class="feature__price">S/.189</p>
+          <span class="feature__ship">⚡ Envío hoy</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PACKS -->
+    <section class="section" id="packs">
+      <div class="wrap">
+        <div class="head head--row">
+          <div>
+            <p class="eyebrow">PACKS MÁS AMADOS</p>
+            <h2>Diseñados para cada momento</h2>
+          </div>
+          <a href="#" class="btn btn--outline">Ver todos →</a>
+        </div>
+        <div class="grid3">
+          <article class="pack">
+            <div class="pack__img" style="--c:#eee9e1">🌿</div>
+            <div class="pack__body">
+              <p class="pack__cat">ESENCIAL</p>
+              <h3>Pack bienestar Zen</h3>
+              <p class="pack__desc">Sales de baño, aromaterapia y una tarjeta personalizada para regalar tranquilidad.</p>
+              <p class="pack__price">S/.89 <small>/Pack completo</small></p>
+              <a href="#" class="btn btn--outline btn--sm">Ver Detalles</a>
+            </div>
+          </article>
+          <article class="pack">
+            <div class="pack__img" style="--c:#eed9d9">💕</div>
+            <div class="pack__body">
+              <p class="pack__cat">ROMÁNTICO</p>
+              <h3>Kit Conexión Pareja</h3>
+              <p class="pack__desc">Velas, chocolates premium, pétalos y una experiencia íntima para dos personas especiales.</p>
+              <p class="pack__price">S/.189 <small>/Pack completo</small></p>
+              <button class="btn btn--gold btn--sm js-add">Preparar mi detalle</button>
+            </div>
+          </article>
+          <article class="pack">
+            <div class="pack__img" style="--c:#e1dced">✨</div>
+            <div class="pack__body">
+              <p class="pack__cat">LUJO</p>
+              <h3>Caja Premium Élite</h3>
+              <p class="pack__desc">Perfumería de nicho, joyería artesanal y caja con grabado personalizado.</p>
+              <p class="pack__price">S/.349 <small>/Pack completo</small></p>
+              <a href="#" class="btn btn--outline btn--sm">Ver Detalles</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORA -->
+    <section class="section" id="explora">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">EXPLORA POR CATEGORÍA</p>
+          <h2>¿Qué emoción quieres regalar?</h2>
+        </div>
+        <div class="grid4">
+          <a href="categorias.html" class="cat" style="--c:#80a29a"><span class="cat__e">🌿</span><span class="cat__t"><b>Bienestar</b>24 productos</span></a>
+          <a href="zodiaco.html" class="cat" style="--c:#202d45"><span class="cat__e">🔮</span><span class="cat__t"><b>Zodiaco</b>12 signos</span></a>
+          <a href="categorias.html" class="cat" style="--c:#bc9851"><span class="cat__e">💕</span><span class="cat__t"><b>Pareja</b>18 productos</span></a>
+          <a href="categorias.html" class="cat" style="--c:#e4cfaa"><span class="cat__e">⭐</span><span class="cat__t"><b>Experiencias</b>10 kits</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORIA -->
+    <section class="section" id="historia">
+      <div class="wrap">
+        <div class="head head--center">
+          <p class="eyebrow eyebrow--wide">HISTORIAS REALES</p>
+          <h2>Regalos que dejaron huella</h2>
+        </div>
+        <div class="grid3">
+          <figure class="quote">
+            <div class="stars" aria-label="5 estrellas">⭐⭐⭐⭐⭐</div>
+            <blockquote>“Usé el asistente y me recomendó el pack perfecto para reconciliarme con mi pareja. Funcionó mejor de lo que imaginé”</blockquote>
+            <figcaption><span class="avatar avatar--g">M</span><span><b>Mariana V.</b>Lima, Perú</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <div class="stars" aria-label="5 estrellas">⭐⭐⭐⭐⭐</div>
+            <blockquote>“La caja llegó preciosa, con el mensaje que escribí. Mi mamá lloró de emoción. Definitivamente vuelvo a comprar.”</blockquote>
+            <figcaption><span class="avatar avatar--g">C</span><span><b>Carlos R.</b>Miraflores, Lima</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <div class="stars" aria-label="5 estrellas">⭐⭐⭐⭐⭐</div>
+            <blockquote>“El quiz tomó 2 minutos y el resultado fue increíble. Se nota que entienden de psicología del regalo.”</blockquote>
+            <figcaption><span class="avatar avatar--g">A</span><span><b>Andrea P.</b>San Isidro, Lima</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="cta" id="asistente">
+          <h2>¿No sabes qué regalar?<br />Nosotros te ayudamos en 3 minutos.</h2>
+          <p>Nuestro asistente inteligente analiza el perfil emocional y te da las mejores opciones.</p>
+          <a href="#" class="btn btn--gold btn--lg">Iniciar el asistente ahora</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a href="#inicio" class="logo logo--big">Alo<span>detalle</span></a>
+          <p class="footer__tag">Regalos que conectan. Momentos que permanecen. Diseñados para emocionar a quien más quieres.</p>
+          <div class="social">
+            <a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="WhatsApp">💬</a><a href="#" aria-label="Mi perfil">👤</a>
+          </div>
+        </div>
+        <div><h4>EXPLORAR</h4><a href="#explora">Categorías</a><a href="#asistente">Asistente de regalos</a><a href="zodiaco.html">Por signo zodiacal</a><a href="empresas.html">Regalos corporativos</a></div>
+        <div><h4>MOMENTOS</h4><a href="#">Reconciliación</a><a href="#">Para el estrés</a><a href="#">Pareja</a><a href="#">Experiencias</a></div>
+        <div><h4>NOSOTROS</h4><a href="#">Quiénes somos</a><a href="blog.html">Blog</a><a href="login.html">Mi perfil</a><a href="#">Política de envíos</a></div>
+      </div>
+      <div class="footer__bar"><span>© 2025 Alodetalle. Todos los derechos reservados.</span><span>Hecho con 💛 en Lima, Perú</span></div>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
