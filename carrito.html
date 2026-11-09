@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tu carrito · Alodetalle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Alatsi&family=Anuphan:wght@600;700&family=DM+Serif+Display&family=Inria+Serif:wght@700&family=Instrument+Sans:wght@600;700&family=Istok+Web:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/carrito.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__in">
+      <a href="index.html" class="logo">Alo<span>detalle</span></a>
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav class="nav__links" id="menu">
+        <a href="categorias.html">Categorias</a>
+        <a href="index.html#asistente">Asistente</a>
+        <a href="zodiaco.html">Zodiaco</a>
+        <a href="empresas.html">Empresas</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="carrito.html" class="pill pill--dark" id="cart-link" hidden>Carrito <b class="badge" id="cart-count" hidden>0</b></a>
+        <a href="login.html" class="pill pill--dark pill--sm" id="login-link">Iniciar Sesión <span class="avatar" aria-hidden="true">👤</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="cart">
+    <h1>Tu Carrito 🛒</h1>
+    <div class="cart__grid">
+      <div class="cart__main">
+        <div id="items" class="items" aria-live="polite"></div>
+
+        <section class="ideas" aria-label="Sugerencias del asistente">
+          <h2>🎯 El Asistente tiene ideas para ti</h2>
+          <p>Basado en tu perfil, estos packs complementan perfectamente tu compra.</p>
+          <div class="ideas__btns" id="ideas"></div>
+        </section>
+      </div>
+
+      <aside class="summary" aria-label="Resumen del pedido">
+        <h2>Resumen del pedido</h2>
+        <dl class="rows">
+          <div><dt>Subtotal</dt><dd id="subtotal">S/.0</dd></div>
+          <div><dt>Envío Estándar</dt><dd class="free">Gratis</dd></div>
+          <div><dt>Descuento Especial</dt><dd class="neg" id="discount">-S/.0</dd></div>
+        </dl>
+
+        <fieldset class="extras">
+          <legend>Extras para el detalle</legend>
+          <label class="chk"><input type="checkbox" id="x-caja" /><span class="box" aria-hidden="true"></span>📦 Caja premium dorada · S/25</label>
+          <label class="chk"><input type="checkbox" id="x-tarjeta" /><span class="box" aria-hidden="true"></span>🎁 Tarjeta personalizada · S/15</label>
+        </fieldset>
+
+        <div class="total"><span>Total</span><strong id="total">S/.0</strong></div>
+        <a href="pedido.html" class="checkout" id="checkout">Ir al checkout →</a>
+        <p class="secure">🔒 Pago seguro - SSL encriptado</p>
+        <p class="pay">💳 Aceptamos Visa, Mastercard, Yape, Plin y transferencia bancaria.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="logo logo--big">Alo<span>detalle</span></a>
+          <p class="footer__tag">Regalos que conectan. Momentos que permanecen. Diseñados para emocionar a quien más quieres.</p>
+          <div class="social">
+            <a href="#" aria-label="Instagram">📸</a><a href="#" aria-label="TikTok">🎵</a><a href="#" aria-label="WhatsApp">💬</a><a href="#" aria-label="Mi perfil">👤</a>
+          </div>
+        </div>
+        <div><h4>EXPLORAR</h4><a href="categorias.html">Categorías</a><a href="index.html#asistente">Asistente de regalos</a><a href="zodiaco.html">Por signo zodiacal</a><a href="empresas.html">Regalos corporativos</a></div>
+        <div><h4>MOMENTOS</h4><a href="#">Reconciliación</a><a href="#">Para el estrés</a><a href="#">Pareja</a><a href="#">Experiencias</a></div>
+        <div><h4>NOSOTROS</h4><a href="#">Quiénes somos</a><a href="blog.html">Blog</a><a href="login.html">Mi perfil</a><a href="#">Política de envíos</a></div>
+      </div>
+      <div class="footer__bar"><span>© 2025 Alodetalle. Todos los derechos reservados.</span><span>Hecho con 💛 en Lima, Perú</span></div>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+  <script src="js/carrito.js"></script>
+</body>
+</html>

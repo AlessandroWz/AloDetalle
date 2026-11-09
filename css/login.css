@@ -1,0 +1,240 @@
+  /* ---------- Tokens (extraídos de Figma) ---------- */
+    :root {
+      --bg-header: #181e29;
+      --bg-form: #111827;
+      --bg-brand: #111827;
+      --bg-field: #222936;
+      --border-field: #373c49;
+      --gold: #c5a059;
+      --gold-soft: #c7aa72;
+      --gold-border: #574d3c;
+      --text: #ffffff;
+      --muted: #787f87;
+      --muted-light: #969da2;
+      --on-gold: #1b263b;
+
+      --font-serif: "Inria Serif", Georgia, serif;
+      --font-body: "Hind Madurai", system-ui, sans-serif;
+      --font-sans: "Inria Sans", system-ui, sans-serif;
+      --font-ui: "Inter", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg-form);
+      color: var(--text);
+      font-family: var(--font-body);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ---------- Header ---------- */
+    .topbar {
+      height: 62px;
+      background: var(--bg-header);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      flex-shrink: 0;
+    }
+    .logo { font-family: var(--font-serif); font-weight: 700; font-size: 25px; }
+    .logo span { color: var(--gold); }
+    .back {
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+      color: #7b7a83;
+      transition: color .2s;
+    }
+    .back:hover { color: var(--text); }
+
+    /* ---------- Layout ---------- */
+    .layout {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    /* ---------- Panel de marca ---------- */
+    .brand {
+      background:
+        radial-gradient(120% 80% at 0% 100%, rgba(197,160,89,.10), transparent 60%),
+        var(--bg-brand);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 58px;
+    }
+    .badge {
+      align-self: flex-start;
+      border: 1px solid var(--gold-border);
+      border-radius: 13px;
+      padding: 9px 13px;
+      font-family: var(--font-ui);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: var(--gold-soft);
+      text-transform: uppercase;
+    }
+    .brand h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(34px, 3.4vw, 46px);
+      line-height: 1.2;
+      margin: 24px 0 18px;
+      max-width: 9em;
+    }
+    .brand h1 em { font-style: normal; color: var(--gold); }
+    .brand p.lead {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 25px;
+      color: var(--muted);
+      max-width: 292px;
+    }
+    .benefits { list-style: none; padding: 0; margin-top: 32px; display: grid; gap: 14px; }
+    .benefits li {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .benefits .dot {
+      width: 30px; height: 30px; flex-shrink: 0;
+      border: 1.5px solid var(--gold);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      color: var(--gold);
+      font-size: 14px;
+    }
+
+    /* ---------- Formulario ---------- */
+    .form-side {
+      background: var(--bg-form);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+    .form-wrap { width: 100%; max-width: 454px; }
+    .form-wrap h2 {
+      font-family: var(--font-serif);
+      font-size: 35px;
+      line-height: 1.2;
+      max-width: 6em;
+    }
+    .signup-hint { margin-top: 14px; font-size: 16px; color: var(--muted); }
+    .signup-hint a { color: var(--gold); }
+    .signup-hint a:hover { text-decoration: underline; }
+
+    .btn-google {
+      margin-top: 28px;
+      width: 100%;
+      height: 45px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      background: var(--bg-field);
+      border: 1px solid var(--border-field);
+      border-radius: 10px;
+      color: var(--muted);
+      font: 500 16px var(--font-body);
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+    .btn-google:hover { border-color: var(--gold-border); }
+
+    .divider {
+      display: flex; align-items: center; gap: 14px;
+      margin: 24px 0 20px;
+      font-size: 14px; letter-spacing: .04em; color: var(--muted);
+      white-space: nowrap;
+    }
+    .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--border-field); }
+
+    label.field-label {
+      display: block;
+      font-weight: 700; font-size: 15px; letter-spacing: .02em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .field {
+      width: 100%; height: 50px;
+      background: var(--bg-field);
+      border: 1px solid var(--border-field);
+      border-radius: 10px;
+      padding: 0 17px;
+      color: var(--text);
+      font: 500 16px var(--font-body);
+    }
+    .field::placeholder { color: var(--muted); }
+    .field:focus { outline: none; border-color: var(--gold); }
+    .field-group + .field-group { margin-top: 18px; }
+
+    .pw-wrap { position: relative; }
+    .pw-wrap .field { padding-right: 52px; }
+    .pw-toggle {
+      position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+      background: none; border: 0; color: var(--muted);
+      font: 500 13px var(--font-body); padding: 8px; cursor: pointer;
+    }
+    .pw-toggle:hover { color: var(--text); }
+
+    .forgot { display: block; text-align: right; margin-top: 8px; font-weight: 700; font-size: 14px; color: var(--muted); }
+    .forgot:hover { color: var(--gold); }
+
+    .remember {
+      display: flex; align-items: center; gap: 12px;
+      margin-top: 14px; cursor: pointer;
+      font-weight: 700; font-size: 15px; color: var(--muted);
+    }
+    .remember input { position: absolute; opacity: 0; pointer-events: none; }
+    .remember .box {
+      width: 22px; height: 22px; border-radius: 5px; flex-shrink: 0;
+      background: var(--bg-field); border: 1px solid var(--border-field);
+      display: grid; place-items: center;
+      color: #000; font-weight: 700; font-size: 16px;
+    }
+    .remember input:checked + .box { background: var(--gold); border-color: var(--gold); }
+    .remember input:checked + .box::after { content: "✓"; }
+    .remember input:focus-visible + .box { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    .btn-submit {
+      margin-top: 24px;
+      width: 100%; height: 50px;
+      background: var(--gold);
+      border: 0; border-radius: 10px;
+      color: var(--on-gold);
+      font: 700 16px var(--font-body);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: filter .2s, transform .1s;
+    }
+    .btn-submit:hover { filter: brightness(1.08); }
+    .btn-submit:active { transform: translateY(1px); }
+    .btn-submit:disabled { opacity: .6; cursor: progress; }
+
+    .error { margin-top: 12px; color: #f08a8a; font-size: 14px; min-height: 1.2em; }
+
+    .legal { margin-top: 14px; text-align: center; font-weight: 700; font-size: 13px; color: var(--muted); }
+    .legal a { color: var(--muted-light); }
+    .legal a:hover { text-decoration: underline; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .brand { display: none; }
+      .back { font-size: 14px; }
+    }
+    @media (max-width: 480px) {
+      .form-wrap h2 { font-size: 30px; }
+      .divider { font-size: 12px; }
+    }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Asistente de regalos · Alodetalle</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=DM+Serif+Display&family=Inria+Serif:wght@700&family=Instrument+Sans:wght@600;700&family=Istok+Web:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/asistente.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__in">
+      <a href="index.html" class="logo">Alo<span>detalle</span></a>
+      <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <nav class="nav__links" id="menu">
+        <a href="categorias.html">Categorias</a>
+        <a href="asistente.html" aria-current="page">Asistente</a>
+        <a href="zodiaco.html">Zodiaco</a>
+        <a href="empresas.html">Empresas</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="carrito.html" class="pill pill--dark" id="cart-link" hidden>Carrito <b class="badge" id="cart-count" hidden>0</b></a>
+        <a href="login.html" class="pill pill--dark pill--sm" id="login-link">Iniciar Sesión <span class="avatar" aria-hidden="true">👤</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="quiz" id="quiz" data-view="q">
+    <div class="wrapq" id="view" aria-live="polite"></div>
+  </main>
+
+  <!-- TODO: reemplaza el # por tu enlace de WhatsApp (https://wa.me/51NUMERO) -->
+  <a class="wa" href="#" aria-label="Escríbenos por WhatsApp" title="WhatsApp">💬</a>
+
+  <script src="js/index.js"></script>
+<script src="js/asistente.js"></script>
+</body>
+</html>

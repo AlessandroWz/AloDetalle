@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crear cuenta · Alodetalle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500;700&family=Inria+Sans:wght@700&family=Inria+Serif:wght@700&family=Inter:wght@700&display=swap" rel="stylesheet" />
+  <!-- Estilos compartidos con el login + los propios del registro -->
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/registro.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="logo" aria-label="Alodetalle, inicio">Alo<span>detalle</span></a>
+    <a href="index.html" class="back">← Volver a la tienda</a>
+  </header>
+
+  <main class="layout">
+    <!-- Panel de marca con video -->
+    <section class="brand brand--video" aria-label="Beneficios de crear tu cuenta">
+      <video class="bg-video" autoplay muted loop playsinline poster="img/fondo.jpg">
+        <source src="img/vid.mp4" type="video/mp4" />
+      </video>
+
+      <span class="badge">✨ Únete a Alodetalle</span>
+      <h1>El regalo <em>perfecto</em> en 3 minutos.</h1>
+      <p class="lead">Crea tu cuenta gratis y deja que nuestro asistente inteligente haga el trabajo por ti. Sin estrés, sin errores.</p>
+      <ul class="benefits">
+        <li><span class="dot" aria-hidden="true">✓</span>Perfil personalizado por tu signo</li>
+        <li><span class="dot" aria-hidden="true">✓</span>Alertas antes de fecha clave</li>
+        <li><span class="dot" aria-hidden="true">✓</span>Packs curados para cada momento</li>
+        <li><span class="dot" aria-hidden="true">✓</span>Guarda métodos de pago seguros</li>
+      </ul>
+    </section>
+
+    <!-- Formulario -->
+    <section class="form-side">
+      <div class="form-wrap">
+        <h2>Crea tu cuenta</h2>
+        <p class="signup-hint">¿Ya tienes cuenta? <a href="login.html">Inicia sesión →</a></p>
+
+        <button type="button" class="btn-google" id="google">
+          <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.9 2.4 30.4 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/>
+            <path fill="#FBBC05" d="M10.5 28.7a14.5 14.5 0 0 1 0-9.4l-7.9-6.1a24 24 0 0 0 0 21.6l7.9-6.1z"/>
+            <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.9 2.3-8.4 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/>
+          </svg>
+          Google
+        </button>
+
+        <div class="divider">O REGÍSTRATE CON EMAIL</div>
+
+        <form id="register-form" novalidate>
+          <div class="name-row">
+            <div class="field-group">
+              <label class="field-label" for="nombre">NOMBRE</label>
+              <input class="field" id="nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Alo" required />
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="apellido">APELLIDO</label>
+              <input class="field" id="apellido" name="apellido" type="text" autocomplete="family-name" placeholder="Detalle" required />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="email">CORREO ELECTRÓNICO</label>
+            <input class="field" id="email" name="email" type="email" autocomplete="email" placeholder="alodetalle@correo.com" required />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="telefono">NÚMERO DE TELÉFONO (WHATSAPP)</label>
+            <input class="field" id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="+51 999 999 999" required />
+          </div>
+
+          <div class="field-group">
+            <div class="label-row">
+              <label class="field-label" for="password">CONTRASEÑA</label>
+              <span class="hint">(Mínimo 8 caracteres)</span>
+            </div>
+            <div class="pw-wrap">
+              <input class="field" id="password" name="password" type="password" autocomplete="new-password" placeholder="Ingresa una contraseña" minlength="8" required />
+              <button type="button" class="pw-toggle" id="pw-toggle" aria-label="Mostrar contraseña" aria-pressed="false">Ver</button>
+            </div>
+          </div>
+
+          <label class="remember">
+            <input type="checkbox" name="terminos" id="terminos" required />
+            <span class="box" aria-hidden="true"></span>
+            <span>Acepto los <a href="terminos.html">Términos de servicio</a> y la <a href="privacidad.html">Política de privacidad</a> de Alodetalle</span>
+          </label>
+
+          <label class="remember">
+            <input type="checkbox" name="marketing" checked />
+            <span class="box" aria-hidden="true"></span>
+            Quiero recibir recordatorios de fechas y ofertas especiales
+          </label>
+
+          <p class="error" id="error" role="alert"></p>
+
+          <button type="submit" class="btn-submit" id="submit">Crear cuenta →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/register.js"></script>
+</body>
+</html>
